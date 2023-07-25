@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     border-top: var(--color-primary) 6px solid;
-    gap: 50px;
+    gap: 20px;
 }
 
 .navbar a{
