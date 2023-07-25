@@ -1,0 +1,60 @@
+.container {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 10px 10px 18px -4px rgba(0, 0, 0, 0.75);
+  position: relative;
+  gap: 2rem;
+  padding: 2rem;
+  width: 80vh;
+}
+
+.container input {
+  display: flex;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  font-weight: bolder;
+}
+.container input:hover {
+  cursor: pointer;
+  background-color: #fbba2d32;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+.icon {
+  font-size: 3rem;
+}
+.username {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.card_detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card_detail_info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fonte {
+  font-weight: bolder;
+}
+

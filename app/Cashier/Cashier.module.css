@@ -1,0 +1,70 @@
+.container_cashiers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  flex-direction: row;
+  gap: 60px;
+  width: 80vw;
+}
+.cashiers_data {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-primary-ligth);
+  border-radius: 1.5rem;
+  padding: 1rem 2rem;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  gap: 20px;
+}
+
+.cashiers_data:hover {
+  opacity: 0.9;
+}
+.cashiers_data h1 {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 28pt;
+}
+.cashiers_data h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+}
+.cashiers_data h3 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.users {
+  display: flex;
+  width: 80vw;
+}
+
+.pagination{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.pagination button{
+  color: var(--color-secondary);
+  background-color: transparent !important;
+  border: var(--color-secondary) 2px solid;
+  border-radius: 100%;
+}
+
+.pagination button:hover{
+  opacity: 0.7;
+}
+
+.antpost{
+  cursor: pointer;
+  border: none !important;
+}
+
+.active{
+  color: rgb(111, 0, 0) !important;
+}

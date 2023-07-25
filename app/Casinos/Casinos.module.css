@@ -1,0 +1,78 @@
+.casinos{
+    padding-bottom: 100px;
+}
+
+
+.tri{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3rem;
+    margin-bottom: 30px;
+}
+
+.tri div{
+    cursor: pointer;
+}
+
+.tri div:hover{
+    transform: scale(0.98);
+
+}
+
+.casinos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tri div img{
+    border-radius: 100%;
+    border: var(--color-secondary) 6px solid;
+    height: 150px;
+    width: auto;
+    overflow: hidden;
+}
+
+.tri div img:hover{
+    background-color: var(--color-secondary);
+    opacity: 0.7;
+}
+
+.tri h3{
+    font-size: 1em;
+    font-weight: 900;
+    font-style: italic;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.pagination{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .pagination button{
+    color: var(--color-secondary);
+    background-color: transparent !important;
+    border: var(--color-secondary) 2px solid;
+    border-radius: 100%;
+  }
+
+  .pagination button:hover{
+    opacity: 0.7;
+  }
+
+  .antpost{
+    cursor: pointer;
+    border: none !important;
+  }
+
+  .active{
+    color: rgb(111, 0, 0) !important;
+  }

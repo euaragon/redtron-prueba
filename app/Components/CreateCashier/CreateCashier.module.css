@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vh;
+  
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vh;
+    background-color: var(--color-secondary);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 10px 10px 18px -4px rgba(0, 0, 0, 0.75);
+}
+
+.btn{
+    background: var(--color-primary);
+}
+
+
+.errorMsg{
+    font-size: 9pt;
+    color: var(--color-primary) !important;
+  }
