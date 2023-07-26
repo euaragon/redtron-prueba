@@ -95,6 +95,7 @@ const Page = () => {
               {"<<"}
             </button>
             <p>{currentUsers} de {pageNumbers.length}</p>
+            
             <button
               className={css.antpost}
               onClick={nextPage}
