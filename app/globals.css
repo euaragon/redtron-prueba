@@ -286,9 +286,17 @@ h2 span {
 .hidden {
   display: none;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99630665d0ed1c28119e8113e021968109d75075
 .eye{
   cursor: pointer;
   position: relative;
   top: -50px;
+<<<<<<< HEAD
   left: 175px;
+=======
+  left: 215px;
+>>>>>>> 99630665d0ed1c28119e8113e021968109d75075
 }
