@@ -222,7 +222,7 @@ h2 span {
 
 .subrayado {
   border-bottom: var(--color-secondary) 2px solid;
-  padding-left: 200px;
+  padding-left: 100px;
   padding-bottom: 10px;
 }
 

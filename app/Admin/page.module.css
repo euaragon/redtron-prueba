@@ -1,7 +1,8 @@
 .buttons_select{
     display: flex;
-    justify-content: space-around;
-    gap: 2rem;
+    justify-content: center;
+    gap: 1rem;
     width: 100%;
     flex-direction: column;
+    margin: 0 auto;
 }
