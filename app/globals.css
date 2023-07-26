@@ -286,3 +286,10 @@ h2 span {
 .hidden {
   display: none;
 }
+
+.eye{
+  cursor: pointer;
+  position: relative;
+  top: -50px;
+  left: 215px;
+}

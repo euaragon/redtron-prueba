@@ -79,7 +79,7 @@ export default function Home() {
           onChange={handlerInputChange}
           required
         />
-        <AiOutlineEye  onClick={toggleShowPassword}/>
+        <AiOutlineEye className="Eye" onClick={toggleShowPassword}/>
         
        
         <button type="submit">ENTRAR</button>
