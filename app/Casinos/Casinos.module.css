@@ -58,6 +58,10 @@
     align-items: center;
   }
 
+.pagination p{
+    font-weight: bold;|
+}
+
   .pagination button{
     color: var(--color-secondary);
     background-color: transparent !important;
