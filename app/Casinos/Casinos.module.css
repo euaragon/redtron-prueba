@@ -55,7 +55,12 @@
     flex-direction: row;
     gap: 10px;
     margin: 20px 0;
+    align-items: center;
   }
+
+.pagination p{
+    font-weight: bold;|
+}
 
   .pagination button{
     color: var(--color-secondary);
