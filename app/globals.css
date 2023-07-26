@@ -216,9 +216,9 @@ h2 span {
   gap: 20px;
 }
 
-.jc-sa {
+/* .jc-sa {
   justify-content: space-around;
-}
+} */
 
 .subrayado {
   border-bottom: var(--color-secondary) 2px solid;
