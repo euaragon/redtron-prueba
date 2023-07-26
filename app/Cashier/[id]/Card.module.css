@@ -105,22 +105,18 @@
   gap: 10px;
  }
 
-<<<<<<< HEAD
  .box1{
   align-items: center;
  }
 
 
 
-=======
->>>>>>> 99630665d0ed1c28119e8113e021968109d75075
  .box2{
   width: 90%;
  }
 
  .data{
   flex-wrap: wrap;
-<<<<<<< HEAD
   justify-content: center;
   gap: 0;
   flex-direction: row;
@@ -142,7 +138,5 @@
   text-align: center;
   font-size: 0.9em;
   margin: 10px 0;
-=======
->>>>>>> 99630665d0ed1c28119e8113e021968109d75075
  }
 }
