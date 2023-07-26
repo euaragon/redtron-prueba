@@ -24,7 +24,7 @@ export default function Page() {
   // Estado para controlar la página actual
   const [currentPage, setCurrentPage] = useState(1);
   // Estado para almacenar la cantidad de casinos por página (en este caso, 6 por página)
-  const casinosPerPage = 2;
+  const casinosPerPage = 3;
   // Estado para calcular el índice del último casino en cada página
   const indexOfLastCasino = currentPage * casinosPerPage;
   // Estado para calcular el índice del primer casino en cada página
@@ -86,11 +86,12 @@ export default function Page() {
             >
               {"<<"}
             </button>
-            {pageNumbers.map((number) => (
+            <p>{currentPage} de {pageNumbers.length}</p>
+            {/* {pageNumbers.map((number) => (
               <button key={number} onClick={() => paginate(number)} className={number === currentPage ? css.active : ""}>
                 {number}
               </button>
-            ))}
+            ))} */}
             <button
               className={css.antpost}
               onClick={nextPage}
