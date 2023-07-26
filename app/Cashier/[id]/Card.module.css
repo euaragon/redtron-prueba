@@ -95,10 +95,6 @@
   padding-bottom: 100px;
  }
 
- h2{
-    align-items: center;
- }
-
  .box{
   flex-direction: column;
   align-items: center;
