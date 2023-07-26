@@ -12,6 +12,7 @@ export default function Home() {
     password: "",
   });
   const { userDb, setUserDB } = useUserContext();
+  const [showPassword, setShowPassword] = React.useState(false);
 
   useEffect(() => {
     userDb.role === "ADMIN" ? router.push("/Admin") : null;
@@ -23,6 +24,11 @@ export default function Home() {
       [name]: value,
     });
   };
+
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   const adminLogin = async (input) => {
     const userDb = await fetch("https://redtronapi-development.up.railway.app/auth/login", {
       method: "POST",
@@ -65,14 +71,28 @@ export default function Home() {
           required
         />
         <input
-          type="password"
+          type={showPassword ? "text" : "password"} // Cambia el tipo del input
           placeholder="Password"
           name="password"
           value={input.password}
           onChange={handlerInputChange}
           required
         />
-
+  <button
+            type="button"
+            onClick={toggleShowPassword}
+            style={{
+              position: "absolute",
+              right: "10px",
+              top: "50%",
+              transform: "translateY(-50%)",
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+            }}
+          >
+            Mostrar/ocultar
+          </button>
         <button type="submit">ENTRAR</button>
       </form>
     </main>
