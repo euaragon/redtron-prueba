@@ -4,6 +4,7 @@ import Logo from "/app/assets/logo.png";
 import React, { useEffect } from "react";
 import { useUserContext } from "./UserContext/UserContext";
 import { useRouter } from "next/navigation";
+import {AiOutlineEye} from 'react-icons/ai'
 
 export default function Home() {
   const router = useRouter();
@@ -12,6 +13,7 @@ export default function Home() {
     password: "",
   });
   const { userDb, setUserDB } = useUserContext();
+  const [showPassword, setShowPassword] = React.useState(false);
 
   useEffect(() => {
     userDb.role === "ADMIN" ? router.push("/Admin") : null;
@@ -23,6 +25,11 @@ export default function Home() {
       [name]: value,
     });
   };
+
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   const adminLogin = async (input) => {
     const userDb = await fetch("https://redtronapi-development.up.railway.app/auth/login", {
       method: "POST",
@@ -34,7 +41,7 @@ export default function Home() {
       .then((res) => res.json())
       .then((response) => {
         let user = {
-          id:response?.data.id,
+          id: response?.data.id,
           username: response?.data.username,
           role: response?.data.role,
           phone: response?.data.phone,
@@ -65,14 +72,16 @@ export default function Home() {
           required
         />
         <input
-          type="password"
+          type={showPassword ? "text" : "password"} // Cambia el tipo del input
           placeholder="Password"
           name="password"
           value={input.password}
           onChange={handlerInputChange}
           required
         />
-
+        <AiOutlineEye className="eye" onClick={toggleShowPassword}/>
+        
+       
         <button type="submit">ENTRAR</button>
       </form>
     </main>

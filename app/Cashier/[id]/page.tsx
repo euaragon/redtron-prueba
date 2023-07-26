@@ -208,13 +208,13 @@ const Page = ({ params }) => {
               </div>
               <div className={css.data}>
                 <h3>
-                  <b>Telefono:</b>
+                  <b>Telefono: &nbsp;</b>
                 </h3>
                 <h4>{userSelected[0].phone}</h4>
               </div>
               <div className={css.data}>
                 <h3>
-                  <b>Rol:</b>
+                  <b>Rol: &nbsp;</b>
                 </h3>
                 <h4>
                   {userSelected[0].role === "ADMIN"
@@ -230,7 +230,7 @@ const Page = ({ params }) => {
               </div>
               <div className={css.data}>
                 <h3>
-                  <b>Estatus:</b>
+                  <b>Estado: &nbsp;</b>
                 </h3>
                 <h4>{transformStatus}</h4>
               </div>
@@ -243,8 +243,9 @@ const Page = ({ params }) => {
                     <h3>
                       <b>{uc.casino.name}</b>
                     </h3>
+                    &nbsp;&nbsp;
                     <h4>
-                      Fichas disponibles:
+                      Fichas disponibles: &nbsp;
                       <b>{uc.coins}</b>
                     </h4>
                     <br />

@@ -8,6 +8,7 @@ import { Modal } from "../Components/modal/modal";
 import CreateCashier from "../Components/CreateCashier/CreateCashier";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import page from "../Password/page";
 
 const Page = () => {
   const router = useRouter();
@@ -94,15 +95,7 @@ const Page = () => {
             >
               {"<<"}
             </button>
-            {pageNumbers.map((number) => (
-              <button
-                key={number}
-                onClick={() => paginate(number)}
-                className={currentPage === number ? css.active : ""}
-              >
-                {number}
-              </button>
-            ))}
+            <p>{currentPage} de {pageNumbers.length}</p>
             <button
               className={css.antpost}
               onClick={nextPage}
