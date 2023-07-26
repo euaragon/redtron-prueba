@@ -88,3 +88,32 @@
 .errores p{
   font-size: 9pt;
 }
+
+@media (max-width: 1039px) {
+ .container{
+  width: 90vw;
+  padding-bottom: 100px;
+ }
+
+ h2{
+    align-items: center;
+ }
+
+ .box{
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .btn{
+  flex-direction: column;
+  gap: 10px;
+ }
+
+ .box2{
+  width: 90%;
+ }
+
+ .data{
+  flex-wrap: wrap;
+ }
+}
