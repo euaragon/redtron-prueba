@@ -48,7 +48,10 @@
   align-items: center;
   gap: 10px;
   margin: 20px 0;
+}
 
+.pagination p {
+  font-weight: 900;
 }
 
 .pagination button{
