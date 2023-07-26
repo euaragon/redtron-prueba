@@ -94,15 +94,7 @@ const Page = () => {
             >
               {"<<"}
             </button>
-            {pageNumbers.map((number) => (
-              <button
-                key={number}
-                onClick={() => paginate(number)}
-                className={currentPage === number ? css.active : ""}
-              >
-                {number}
-              </button>
-            ))}
+            <p>{currentUsers} de {pageNumbers.length}</p>
             <button
               className={css.antpost}
               onClick={nextPage}
