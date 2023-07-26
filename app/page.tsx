@@ -86,9 +86,4 @@ export default function Home() {
       </form>
     </main>
   );
-<<<<<<< HEAD
 }
-=======
-}
-
->>>>>>> 99630665d0ed1c28119e8113e021968109d75075
