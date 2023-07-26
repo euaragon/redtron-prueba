@@ -1,13 +1,14 @@
 "use client";
-import css from "./Cashier.module.css";
 import React, { useEffect } from "react";
 import { useUsersContext } from "../UsersContext/UsersContext";
 import { FaUser } from "react-icons/fa";
+import css from "./Cashier.module.css";
 import { useUserContext } from "../UserContext/UserContext";
 import { Modal } from "../Components/modal/modal";
-import { useRouter } from "next/navigation";
 import CreateCashier from "../Components/CreateCashier/CreateCashier";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
+import page from "../Password/page";
 
 const Page = () => {
   const router = useRouter();
@@ -94,7 +95,7 @@ const Page = () => {
             >
               {"<<"}
             </button>
-            <p>{currentUsers} de {pageNumbers.length}</p>
+            <p>{currentPage} de {pageNumbers.length}</p>
             <button
               className={css.antpost}
               onClick={nextPage}
