@@ -2,8 +2,8 @@
 "use client";
 
 import css from "./Casinos.module.css";
+import React, { useState } from "react";
 import { useCasinosContext } from "../CasinoContext/CasinoContext";
-import React, { useState, useEffect } from "react";
 import { Modal } from "../Components/modal/modal";
 import Casino from "../Components/Casino/Casino";
 import CreateCasino from "../Components/Casino/CreateCasino";

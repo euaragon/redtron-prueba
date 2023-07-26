@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import css from "./Casino.module.css";
 import { useEffect, useState } from "react";
 import { useUsersContext } from "../../UsersContext/UsersContext";
-import css from "./Casino.module.css";
 import { useUserContext } from "../../UserContext/UserContext";
 
 const Casino = ({ id, name, imageUrl, onClose }) => {

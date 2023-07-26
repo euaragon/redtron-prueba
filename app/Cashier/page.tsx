@@ -1,12 +1,12 @@
 "use client";
+import css from "./Cashier.module.css";
 import React, { useEffect } from "react";
 import { useUsersContext } from "../UsersContext/UsersContext";
 import { FaUser } from "react-icons/fa";
-import css from "./Cashier.module.css";
 import { useUserContext } from "../UserContext/UserContext";
 import { Modal } from "../Components/modal/modal";
-import CreateCashier from "../Components/CreateCashier/CreateCashier";
 import { useRouter } from "next/navigation";
+import CreateCashier from "../Components/CreateCashier/CreateCashier";
 import Link from "next/link";
 
 const Page = () => {
