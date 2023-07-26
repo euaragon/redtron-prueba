@@ -249,6 +249,8 @@ h2 span {
   border-radius: 30px;
 }
 
+
+
 .btn-create span {
   font-size: 1.7em;
   padding: 20px 30px;
@@ -286,17 +288,9 @@ h2 span {
 .hidden {
   display: none;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 99630665d0ed1c28119e8113e021968109d75075
 .eye{
   cursor: pointer;
   position: relative;
   top: -50px;
-<<<<<<< HEAD
   left: 175px;
-=======
-  left: 215px;
->>>>>>> 99630665d0ed1c28119e8113e021968109d75075
 }
