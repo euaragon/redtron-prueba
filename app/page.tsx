@@ -4,6 +4,7 @@ import Logo from "/app/assets/logo.png";
 import React, { useEffect } from "react";
 import { useUserContext } from "./UserContext/UserContext";
 import { useRouter } from "next/navigation";
+import {AiOutlineEye} from 'react-icons/ai'
 
 export default function Home() {
   const router = useRouter();
@@ -40,7 +41,7 @@ export default function Home() {
       .then((res) => res.json())
       .then((response) => {
         let user = {
-          id:response?.data.id,
+          id: response?.data.id,
           username: response?.data.username,
           role: response?.data.role,
           phone: response?.data.phone,
@@ -78,23 +79,12 @@ export default function Home() {
           onChange={handlerInputChange}
           required
         />
-  <button
-            type="button"
-            onClick={toggleShowPassword}
-            style={{
-              position: "absolute",
-              right: "10px",
-              top: "50%",
-              transform: "translateY(-50%)",
-              background: "transparent",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            Mostrar/ocultar
-          </button>
+        <AiOutlineEye  onClick={toggleShowPassword}/>
+        
+       
         <button type="submit">ENTRAR</button>
       </form>
     </main>
   );
 }
+
