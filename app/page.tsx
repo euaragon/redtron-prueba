@@ -80,8 +80,6 @@ export default function Home() {
           required
         />
         <AiOutlineEye className="eye" onClick={toggleShowPassword}/>
-        
-       
         <button type="submit">ENTRAR</button>
       </form>
     </main>

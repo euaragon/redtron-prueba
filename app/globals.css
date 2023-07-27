@@ -216,13 +216,13 @@ h2 span {
   gap: 20px;
 }
 
-/* .jc-sa {
+.jc-sa {
   justify-content: space-around;
-} */
+}
 
 .subrayado {
   border-bottom: var(--color-secondary) 2px solid;
-  padding-left: 100px;
+  padding-left: 200px;
   padding-bottom: 10px;
 }
 
@@ -248,8 +248,6 @@ h2 span {
   padding: 0 40px 0 0;
   border-radius: 30px;
 }
-
-
 
 .btn-create span {
   font-size: 1.7em;
@@ -292,5 +290,5 @@ h2 span {
   cursor: pointer;
   position: relative;
   top: -50px;
-  left: 180px;
+  left: 210px;
 }

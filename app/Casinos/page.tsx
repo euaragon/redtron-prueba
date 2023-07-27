@@ -87,11 +87,7 @@ export default function Page() {
               {"<<"}
             </button>
             <p>{currentPage} de {pageNumbers.length}</p>
-            {/* {pageNumbers.map((number) => (
-              <button key={number} onClick={() => paginate(number)} className={number === currentPage ? css.active : ""}>
-                {number}
-              </button>
-            ))} */}
+            
             <button
               className={css.antpost}
               onClick={nextPage}
