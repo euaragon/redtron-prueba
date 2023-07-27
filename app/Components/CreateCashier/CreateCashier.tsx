@@ -10,32 +10,15 @@ const CreateCashier = ({ tokenId, onClose, reload }) => {
     percent_agreement: 0,
   });
 
-  const [errors, setErrors] = useState({
-    username: "",
-    phone: "",
-    email: "",
-    percent_agreement: "",
-  });
-
-  const createCashier = async (token, object) => {
-    try {
-      const response = await fetch("https://redtronapi-development.up.railway.app/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          authorization: "Bearer " + token,
-        },
-        body: JSON.stringify(object),
-      });
-
-      if (!response.ok) {
-        throw new Error("Error al crear el cajero.");
-      }
-
-      return response.json();
-    } catch (error) {
-      throw new Error(error.message);
-    }
+  const createCashier = async (token:string, object:object) => {
+    const userDb = await fetch("https://redtronapi-development.up.railway.app/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: "Bearer " + token,
+      },
+      body: JSON.stringify(object),
+    });
   };
 
   const handlerInputChange = ({ target: { name, value } }) => {

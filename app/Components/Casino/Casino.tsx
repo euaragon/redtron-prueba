@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import css from "./Casino.module.css";
 import { useEffect, useState } from "react";
 import { useUsersContext } from "../../UsersContext/UsersContext";
+import css from "./Casino.module.css";
 import { useUserContext } from "../../UserContext/UserContext";
 
 const Casino = ({ id, name, imageUrl, onClose }) => {
@@ -49,7 +49,7 @@ const Casino = ({ id, name, imageUrl, onClose }) => {
   };
   const postUserCasino = async () => {
     try {
-      const response = await fetch("http://localhost:3001/userCasino", {
+      const response = await fetch("https://redtronapi-development.up.railway.app/userCasino", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

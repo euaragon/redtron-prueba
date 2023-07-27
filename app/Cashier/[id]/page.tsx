@@ -208,13 +208,13 @@ const Page = ({ params }) => {
               </div>
               <div className={css.data}>
                 <h3>
-                  <b>Telefono: &nbsp;</b>
+                  <b>Telefono:</b>
                 </h3>
                 <h4>{userSelected[0].phone}</h4>
               </div>
               <div className={css.data}>
                 <h3>
-                  <b>Rol: &nbsp;</b>
+                  <b>Rol:</b>
                 </h3>
                 <h4>
                   {userSelected[0].role === "ADMIN"
