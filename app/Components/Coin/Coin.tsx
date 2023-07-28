@@ -6,7 +6,8 @@ import css from "./Coin.module.css"
 const Coin = ({ assignedId }) => {
   const { userDb } = useUserContext();
   const { usersDb } = useUsersContext();
-  const firstId = usersDb[0]?.user_casino[0]?.id || "";
+  const firstId = usersDb && usersDb[0]?.user_casino[0]?.id || "";
+  // const firstId = usersDb[0]?.user_casino[0]?.id || "";
   const tokenID = userDb?.token;
   const [coinsMovements, setCoinsMovements] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
