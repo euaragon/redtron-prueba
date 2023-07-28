@@ -10,15 +10,30 @@ const CreateCashier = ({ tokenId, onClose, reload }) => {
     percent_agreement: 0,
   });
 
-  const createCashier = async (token:string, object:object) => {
-    const userDb = await fetch("https://redtronapi-development.up.railway.app/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: "Bearer " + token,
-      },
-      body: JSON.stringify(object),
-    });
+  const [errors, setErrors] = useState({
+    username: "",
+    phone: "",
+    email: "",
+    percent_agreement: "",
+  });
+
+  const createCashier = async (token, object) => {
+    try {
+      const userDb = await fetch("https://redtronapi-development.up.railway.app/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: "Bearer " + token,
+        },
+        body: JSON.stringify(object),
+      });
+
+      // Handle the response if necessary
+      // const response = await userDb.json();
+      // console.log(response);
+    } catch (error) {
+      throw new Error("Error creating cashier: " + error.message);
+    }
   };
 
   const handlerInputChange = ({ target: { name, value } }) => {
@@ -34,7 +49,7 @@ const CreateCashier = ({ tokenId, onClose, reload }) => {
       username: "",
       phone: "",
       email: "",
-    percent_agreement: "",
+      percent_agreement: "",
     };
 
     if (!input.username) {
@@ -52,7 +67,7 @@ const CreateCashier = ({ tokenId, onClose, reload }) => {
       hasErrors = true;
     }
 
-    if (input.percent_agreement === 0 || !input.percent_agreement) {
+    if (input.percent_agreement <= 0 || !input.percent_agreement) {
       newErrors.percent_agreement = "Debe ingresar un monto mayor a 0.";
       hasErrors = true;
     }
@@ -123,7 +138,7 @@ const CreateCashier = ({ tokenId, onClose, reload }) => {
           placeholder="Email"
           onChange={handlerInputChange}
         />
-        {errors.phone && <p className={css.errorMsg}>{errors.phone}</p>}
+        {errors.email && <p className={css.errorMsg}>{errors.email}</p>}
         <input
           type="number"
           name="percent_agreement"

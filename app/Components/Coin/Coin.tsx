@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useUserContext } from "../../UserContext/UserContext";
 import { useUsersContext } from "../../UsersContext/UsersContext";
+import css from "./Coin.module.css"
 
 const Coin = ({ assignedId }) => {
   const { userDb } = useUserContext();
@@ -81,7 +82,7 @@ const Coin = ({ assignedId }) => {
   const currentItems = filteredMovements.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
-    <div>
+    <div className={css.container}>
       <h2>Últimos Movimientos</h2>
       <div>
         <input
@@ -98,7 +99,7 @@ const Coin = ({ assignedId }) => {
       {currentItems.map((movement) => (
         <div key={movement.id}>
           <h3>
-            El total de fichas cargadas para el cajero {movement.userCasinoId.user.username} en el casino {movement.userCasinoId.casino.name} es de {movement.coins_balance}
+            El total de fichas cargadas para el cajero <b>{movement.userCasinoId.user.username}</b> en el casino <b>{movement.userCasinoId.casino.name}</b> es de <b>{movement.coins_balance}</b>
           </h3>
         </div>
       ))}

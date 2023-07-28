@@ -152,9 +152,7 @@ const AssignCoins = ({setAssigned}) => {
     <div onClick={(e) => e.stopPropagation()} className={css.container}>
       <div className={css.row}>
         <h2>Asignar Fichas</h2>
-        <Link className={css.blanco} href="/Admin">
-          cerrar
-        </Link>
+        <Link className={css.blanco} href="/Admin">cerrar</Link>
       </div>
       <form onSubmit={handleSubmit}>
         <label>Casino:</label>
