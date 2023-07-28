@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import { CoinsContext, CoinsContextValue } from "./CoinsContext"; // Asegúrate de importar el contexto adecuadamente
+import { CoinsContext, CoinsContextValue } from "./CoinsContext";
 import { useUserContext } from "../UserContext/UserContext";
 import { useCasinosContext } from "../CasinoContext/CasinoContext";
 
 export const CoinsProvider = ({ children, userCasinoId }: any) => {
-  const [coinsDb, setCoinsDB] = React.useState<Array<any> | null>(null); // Especifiquemos el tipo de 'coinsDb'
+  const [coinsDb, setCoinsDB] = React.useState<Array<any> | null>(null); 
   const [charge, setCharge] = React.useState(false);
   const { userDb } = useUserContext();
   const { casinosDb } = useCasinosContext();
