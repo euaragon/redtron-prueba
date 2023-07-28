@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useUserContext } from "../../UserContext/UserContext";
 import { useCasinosContext } from "../../CasinoContext/CasinoContext";
 import Link from "next/link";
-import css from "../AssignCoins.module.css";
+import css from "./AssignCoins.module.css";
 import { useUsersContext } from "../../UsersContext/UsersContext";
 import swal from "sweetalert";
 
