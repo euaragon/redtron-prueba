@@ -25,4 +25,3 @@ export const CoinsContext = createContext<CoinsContextValue>({
 });
 
 export const useCoinsContext = () => useContext(CoinsContext);
-

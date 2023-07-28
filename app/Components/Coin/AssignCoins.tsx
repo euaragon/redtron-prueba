@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import { useUserContext } from "../../UserContext/UserContext";
 import { useCasinosContext } from "../../CasinoContext/CasinoContext";
 import Link from "next/link";
-import css from "./AssignCoins.module.css";
+import css from "../AssignCoins.module.css";
 import { useUsersContext } from "../../UsersContext/UsersContext";
+import swal from "sweetalert";
 
 
 const AssignCoins = ({setAssigned}) => {
@@ -142,7 +143,7 @@ const AssignCoins = ({setAssigned}) => {
     postCoins(input, tokenId);
     setInput({
       userCasinoId: "",
-      inflow_qty: "",
+      inflow_qty: 0,
     });
     setAssigned(input.userCasinoId)
   };
